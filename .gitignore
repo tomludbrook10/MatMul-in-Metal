@@ -1,0 +1,114 @@
+# Created by combining standard templates for macOS, Xcode, C++, and Metal-specific patterns.
+# Sources: GitHub's gitignore repo (Global/macOS, Global/Xcode, C++) and common Metal practices.
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# iCloud generated files
+*.icloud
+
+### Xcode ###
+# Build artifacts and derived data
+build/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+# User settings
+xcuserdata/
+
+# Compatibility with older Xcode
+*.xcscmblueprint
+*.xccheckout
+
+# Xcode patch
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+### C++ ###
+# Compiled object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Compiled dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran modules (if applicable)
+*.mod
+*.smod
+
+# Compiled static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+### Metal ###
+# Compiled shader intermediates and libraries (if precompiling shaders outside Xcode)
+*.air
+*.metallib
+*.metalar
+
+### Other common ignores ###
+# Swap files
+[._]*.s[a-v][a-z]
+[._]*.sw?
+!*.svg  # Uncomment if you need to track SVG files
+
+# Temporary files
+*~
+.fuse_hidden*
+*.swp
+
+# Kernel extensions (unlikely, but for completeness)
+.kext*
