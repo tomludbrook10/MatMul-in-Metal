@@ -23,35 +23,6 @@ inline void fill_vector_with_randoms(std::vector<float> &matrix) {
                   { return static_cast<float>(std::rand()) / static_cast<float>(RAND_MAX); });
 }
 
-// TODO: come back use correct guideline c++,
-// for instance here, I should just parse the vector as const vector&
-// or atleast you span
-//inline void matrixToVectorize(const float* source, simd_float4* target, const uint size) {
-//    if (size % 4 != 0) {
-//        fprintf(stderr, "Error: this matrix cannot be vectorize");
-//        return;
-//    }
-//    
-//    for (uint i = 0; i < size * size / 4; i++) {
-//        auto vec = simd_make_float4(source[i*4], source[i*4 + 1], source[i*4 + 2], source[i*4 + 3]);
-//        target[i] = vec;
-//    }
-//}
-//
-//inline void vectorizeToMatrix(float* target, const simd_float4* source, const uint size) {
-//    if (size % 4 != 0) {
-//        fprintf(stderr, "Error: this matrix cannot be vectorize");
-//        return;
-//    }
-//    
-//    for (uint i = 0; i < size * size / 4; i++) {
-//        target[i*4] = source[i].x;
-//        target[i*4 + 1] = source[i].y;
-//        target[i*4 + 2] = source[i].z;
-//        target[i*4 + 3] = source[i].w;
-//    }
-//}
-
 matmul_manager::matmul_manager(const uint32_t M, const uint32_t K, const uint32_t N)
 : _matrix_data({ M, K, N, std::vector<float>(M * K), std::vector<float>(K * N), std::vector<float>(M * N)})
 {
